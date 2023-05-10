@@ -47,7 +47,7 @@ jobs:
           - provider: webdriverio
             browser: edge
           - provider: webdriverio
-            browser: saferi
+            browser: safari
           - provider: playwright
             browser: firefox
           - provider: playwright
