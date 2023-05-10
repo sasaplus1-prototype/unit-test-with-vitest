@@ -62,7 +62,7 @@ jobs:
           cache: npm
           node-version: lts/*
       - run: npm ci
-      - run: npx playwright install webkit
+      - run: npx playwright install --with-deps webkit
         if: matrix.provider == 'playwright' && matrix.browser == 'webkit'
       - run: >
           npx vitest
