@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@vitest/browser": "^0.31.0",
     "vitest": "^0.31.0"
   },
   "private": true,
