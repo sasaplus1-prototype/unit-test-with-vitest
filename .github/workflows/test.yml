@@ -9,6 +9,7 @@ concurrency:
 
 jobs:
   test-with-node:
+    name: node
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
