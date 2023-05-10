@@ -26,19 +26,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        provider:
-          - webdriverio
-          - playwright
-        browser:
-          # webdriverio
-          - firefox
-          - chrome
-          - edge
-          - safari
-          # playwright
-          - firefox
-          - webkit
-          - chromium
+        # provider:
+        #   - webdriverio
+        #   - playwright
+        # browser:
+        #   # webdriverio
+        #   - firefox
+        #   - chrome
+        #   - edge
+        #   - safari
+        #   # playwright
+        #   - firefox
+        #   - webkit
+        #   - chromium
         include:
           - provider: webdriverio
             browser: firefox
