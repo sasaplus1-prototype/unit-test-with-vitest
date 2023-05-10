@@ -20,6 +20,7 @@ jobs:
       - run: npm ci
       - run: npm test
   test-with-browser:
+    name: ${{ matrix.browser }} on ${{ matrix.provider }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     strategy:
