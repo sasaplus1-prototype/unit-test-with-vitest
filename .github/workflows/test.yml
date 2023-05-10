@@ -75,6 +75,7 @@ jobs:
         if: matrix.provider == 'playwright' && matrix.browser == 'webkit'
       - run: >
           npx vitest
+          --config vitest-e2e.config.ts
           --browser.provider=${{ matrix.provider }}
           --browser.name=${{ matrix.browser }}
           --browser.headless
