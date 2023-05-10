@@ -22,7 +22,7 @@ jobs:
       - run: npm test
   test-with-browser:
     name: ${{ matrix.browser }} on ${{ matrix.provider }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.machine }}
     timeout-minutes: 5
     strategy:
       fail-fast: false
@@ -41,19 +41,26 @@ jobs:
         #   - webkit
         #   - chromium
         include:
-          - provider: webdriverio
+          - machine: ubuntu-latest
+            provider: webdriverio
             browser: firefox
-          - provider: webdriverio
+          - machine: ubuntu-latest
+            provider: webdriverio
             browser: chrome 
-          - provider: webdriverio
+          - machine: ubuntu-latest
+            provider: webdriverio
             browser: edge
-          - provider: webdriverio
+          - machine: macos-latest
+            provider: webdriverio
             browser: safari
-          - provider: playwright
+          - machine: ubuntu-latest
+            provider: playwright
             browser: firefox
-          - provider: playwright
+          - machine: ubuntu-latest
+            provider: playwright
             browser: webkit
-          - provider: playwright
+          - machine: ubuntu-latest
+            provider: playwright
             browser: chromium
     steps:
       - uses: actions/checkout@v3
