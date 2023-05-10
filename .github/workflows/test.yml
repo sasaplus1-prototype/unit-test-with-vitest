@@ -68,9 +68,11 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-      - run: sudo safaridriver --enable
-        if: matrix.machine == 'macos-latest' && matrix.browser == 'safari'
+    # - run: sudo safaridriver --enable
+    #   if: matrix.machine == 'macos-latest' && matrix.browser == 'safari'
       - run: npm ci
+      - run: npm install -D safaridriver
+        if: matrix.machine == 'macos-latest' && matrix.browser == 'safari'
       - run: npx playwright install --with-deps webkit
         if: matrix.provider == 'playwright' && matrix.browser == 'webkit'
       - run: >
